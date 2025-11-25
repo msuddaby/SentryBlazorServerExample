@@ -1,7 +1,6 @@
 # Improved Sentry logging for ASP.NET Core Blazor
 
-Blazor unconventionally uses SignalR to render pages on Blazor, making error tracing a bit difficult.
-Recently, Microsoft added new activity tracing capabilities ([source](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/?view=aspnetcore-10.0)) to Blazor, which makes it a lot easier to add automatic breadcrumbs.
+Blazor Server's SignalR-based rendering architecture presents unique challenges for error tracking and debugging. This integration leverages Microsoft's new activity tracing capabilities [(introduced in ASP.NET Core 10.0)](https://learn.microsoft.com/en-us/aspnet/core/blazor/performance/?view=aspnetcore-10.0) to provide comprehensive automatic breadcrumbs and enriched error context in Sentry.
 
 ## Setup
 The following packages are required:
@@ -14,7 +13,7 @@ OpenTelemetry.Extensions.Hosting
 OpenTelemetry.Instrumentation.AspNetCore
 ```
 
-In order to get the new traces, we must set up OpenTelemetry and Sentry together. Otherwise, actions like `Microsoft.AspNetCore.Components.Navigate` will have no tags, thus no useful information.
+To capture Blazor-specific traces with full context, OpenTelemetry and Sentry must be configured together. Without this integration, activities like Microsoft.AspNetCore.Components.Navigate will lack meaningful tags and metadata.
 
 ### Add the following to `Program.cs`
 
