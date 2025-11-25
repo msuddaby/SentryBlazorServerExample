@@ -73,3 +73,11 @@ builder.Services.AddHostedService(sp => sp.GetRequiredService<BlazorSentryIntegr
 
 ## Todo
 I'd like to experiment and see if replay could be done via the JavaScript SDK + Blazor's JS interop
+
+
+## Screenshots
+<img width="501" height="92" alt="Screenshot_20251124_170515" src="https://github.com/user-attachments/assets/f6abe74f-8128-4f9d-a236-ef523d0ccd5f" />
+<img width="681" height="846" alt="Screenshot_20251124_170559" src="https://github.com/user-attachments/assets/8f5d2243-bcd3-411d-a1c3-8d1ff0d0503b" />
+<img width="681" height="604" alt="Screenshot_20251124_170611" src="https://github.com/user-attachments/assets/17708cb8-a698-4b06-87cd-5c58ea4cfbc2" />
+
+
