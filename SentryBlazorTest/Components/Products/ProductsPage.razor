@@ -1,0 +1,19 @@
+@page "/Products"
+
+<h1>All Products</h1>
+
+<button class="btn btn-danger" @onclick="Error">F
+    Error
+</button>
+
+
+
+@code {
+
+    private void Error()
+    {
+        throw new ApplicationException("This is a test error for Sentry");
+    }
+    
+    
+}
